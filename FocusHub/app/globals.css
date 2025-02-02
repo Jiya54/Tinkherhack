@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf3e0;
+  --primary: #ffb6b9;
+  --accent: #a8e6cf;
+  --text: #454545;
+  --card-bg: #ffffff;
+  --font-main: "Inter", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+[data-theme="light"] {
+  --background: #faf3e0;
+  --primary: #ffb6b9;
+  --accent: #a8e6cf;
+  --text: #454545;
+  --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #2c3e50;
+  --primary: #ffb6b9;
+  --accent: #a8e6cf;
+  --text: #ecf0f1;
+  --card-bg: #34495e;
+}
+
+[data-theme="nature"] {
+  --background: #e8f3d6;
+  --primary: #fcb9aa;
+  --accent: #badfdb;
+  --text: #454545;
+  --card-bg: #fafafa;
+}
+
+/* Features section colors */
+.features-section {
+  --features-bg: #f5f7fa;
+  --features-primary: #4a90e2;
+  --features-accent: #f8e71c;
+  --features-text: #333333;
+}
+
+/* Goals section colors */
+.goals-section {
+  --goals-bg: #1e1e1e;
+  --goals-primary: #03dac5;
+  --goals-accent: #ff0266;
+  --goals-text: #e0e0e0;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.quote-bubble {
+  position: relative;
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-radius: 20px;
+  padding: 15px;
+  max-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--card-bg) transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+/* Study Stickers */
+.study-sticker {
+  position: absolute;
+  z-index: 100;
+  opacity: 0.7;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.study-sticker:hover {
+  transform: scale(1.1);
+}
+
+.sticker1 {
+  top: 20%;
+  left: 10%;
+}
+.sticker2 {
+  top: 25%;
+  right: 5%;
+}
+.sticker3 {
+  bottom: 10%;
+  left: 15%;
+}
+.sticker4 {
+  bottom: 15%;
+  right: 10%;
+}
+
+/* Nemo Mascot */
+.nemo-mascot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.nemo-mascot:hover {
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
